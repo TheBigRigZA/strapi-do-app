@@ -1,0 +1,69 @@
+{
+  "collectionName": "components_product_variants",
+  "info": {
+    "displayName": "Product Variant",
+    "description": "Product variant with options"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "medusa_id": {
+      "type": "string",
+      "required": true
+    },
+    "sku": {
+      "type": "string"
+    },
+    "ean": {
+      "type": "string"
+    },
+    "upc": {
+      "type": "string"
+    },
+    "barcode": {
+      "type": "string"
+    },
+    "hs_code": {
+      "type": "string"
+    },
+    "inventory_quantity": {
+      "type": "integer",
+      "default": 0
+    },
+    "allow_backorder": {
+      "type": "boolean",
+      "default": false
+    },
+    "manage_inventory": {
+      "type": "boolean",
+      "default": true
+    },
+    "weight": {
+      "type": "decimal"
+    },
+    "length": {
+      "type": "decimal"
+    },
+    "height": {
+      "type": "decimal"
+    },
+    "width": {
+      "type": "decimal"
+    },
+    "origin_country": {
+      "type": "string"
+    },
+    "material": {
+      "type": "string"
+    },
+    "options": {
+      "type": "json"
+    },
+    "metadata": {
+      "type": "json"
+    }
+  }
+}
