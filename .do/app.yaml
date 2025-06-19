@@ -1,5 +1,9 @@
 name: strapi-do-app
 region: fra
+domains:
+- domain: strapi.mediabox.co
+  type: PRIMARY
+  zone: mediabox.co
 services:
 - build_command: npm ci && npm run build
   environment_slug: node-js
@@ -45,6 +49,6 @@ services:
   - key: MEDUSA_BACKEND_URL
     value: "https://shop.mediabox.co"
   - key: PUBLIC_URL
-    value: "${APP_URL}"
+    value: "https://strapi.mediabox.co"
   - key: IS_PROXIED
     value: "true"
