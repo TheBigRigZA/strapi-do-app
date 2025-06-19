@@ -1,0 +1,48 @@
+name: strapi-do-app
+region: fra
+services:
+- build_command: npm ci && npm run build
+  environment_slug: node-js
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: TheBigRigZA/strapi-do-app
+  http_port: 1337
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: strapi-cms
+  routes:
+  - path: /
+  run_command: npm start
+  source_dir: /
+  envs:
+  - key: NODE_ENV
+    value: production
+  - key: HOST
+    value: "0.0.0.0"
+  - key: PORT
+    value: "1337"
+  - key: DATABASE_CLIENT
+    value: postgres
+  - key: DATABASE_URL
+    value: postgresql://postgres.yborcfqpbmhylxkbdqup:Steenberg!88@aws-0-eu-central-1.pooler.supabase.com:5432/postgres
+  - key: DATABASE_SSL
+    value: "true"
+  - key: DATABASE_SSL_REJECT_UNAUTHORIZED
+    value: "false"
+  - key: APP_KEYS
+    value: "V5O6a4EaEwLEgIf+pBwnFg==,7q6QC6l+SR4OlVmdghwUig==,9B1aYkFIuSTtWW8e8NzUCA==,jNpyMAVXC5+Yesx1huTbLg=="
+  - key: API_TOKEN_SALT
+    value: "IrtDA2dgE+ZbEKhDQga91w=="
+  - key: ADMIN_JWT_SECRET
+    value: "cIbFb4+QBlrAQ0+dQiopqw=="
+  - key: TRANSFER_TOKEN_SALT
+    value: "K44rPeLai12aPLGnjCwHNQ=="
+  - key: ENCRYPTION_KEY
+    value: "mBFIWBD0PER8WjDwnaZK1g=="
+  - key: MEDUSA_BACKEND_URL
+    value: "https://shop.mediabox.co"
+  - key: PUBLIC_URL
+    value: "${APP_URL}"
+  - key: IS_PROXIED
+    value: "true"
