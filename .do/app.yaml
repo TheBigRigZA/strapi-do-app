@@ -40,6 +40,8 @@ services:
     value: "K44rPeLai12aPLGnjCwHNQ=="
   - key: ENCRYPTION_KEY
     value: "mBFIWBD0PER8WjDwnaZK1g=="
+  - key: JWT_SECRET
+    value: "cIbFb4+QBlrAQ0+dQiopqw=="
   - key: MEDUSA_BACKEND_URL
     value: "https://shop.mediabox.co"
   - key: PUBLIC_URL
